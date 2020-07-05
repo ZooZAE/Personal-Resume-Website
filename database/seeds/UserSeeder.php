@@ -12,17 +12,17 @@ class UserSeeder extends Seeder
     public function run()
     {
         $user = \App\User::create([
-            'name' => 'Izzat Ala Eddine',
-            'email' => 'izzatalaeddine13@gmail.com',
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('password'),
         ]);
 
         App\Profile::create([
             'user_id' => $user->id,
-            'about' => "I'm a University Student studying Computer Science to get my Bachelor Degree. I got interested in web designing first class i took and i'm always interested in learning more.",
-            'phone' => '71407902',
-            'address' => 'Lebanon/Beirut',
-            'DOB' => '1993-04-13',
+            'about' => "About Me.",
+            'phone' => '000000',
+            'address' => 'Earth',
+            'DOB' => '2020-05-07',
             'CV' => '/uploads/profile/IzzatsResume.pdf',
         ]);
     }
